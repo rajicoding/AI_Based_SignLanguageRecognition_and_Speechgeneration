@@ -27,44 +27,56 @@ The system captures hand signs through a webcam, recognizes the corresponding al
 
 ✅ User-friendly interface
 
-🛠️ Technology Stack
-Programming Language
-Python
-Computer Vision
-OpenCV
-CVZone
-Deep Learning
-TensorFlow
-Keras
-MobileNetV2
-Data Processing
-NumPy
-Speech Generation
-pyttsx3
-Additional Libraries
-Threading
-Queue
-Collections (Counter)
-🏗️ System Workflow
-Webcam Input
-      ↓
+## 🛠️ Technology Stack
+
+### Programming Language
+- Python 3.10
+
+### Artificial Intelligence & Deep Learning
+- TensorFlow
+- Keras
+- MobileNetV2
+
+### Computer Vision
+- OpenCV
+- MediaPipe
+- CVZone
+
+### Libraries & Utilities
+- NumPy
+- Pillow
+- pyttsx3 (Text-to-Speech)
+- Threading
+- Collections (Counter)
+
+### Development Environment
+- Jupyter Notebook
+  
+## 🔄 System Workflow
+
+```text
+Webcam
+   ↓
 Hand Detection (CVZone)
-      ↓
+   ↓
 Image Preprocessing
-      ↓
-MobileNetV2 Model
-      ↓
-Alphabet Prediction
-      ↓
+   ↓
+MobileNetV2 Prediction
+   ↓
 Prediction Smoothing
-      ↓
+   ↓
 Text Generation
-      ↓
+   ↓
 Sentence Formation
-      ↓
+   ↓
 Text-to-Speech Output
-📂 Project Structure
-Sign-Language-Recognition/
+
+```
+
+## 📂 Project Structure
+
+```text
+AI-Based-SignLanguageRecognition_and_Speechgeneration/
 │
 ├── dataset/
 │   ├── train/
@@ -79,87 +91,181 @@ Sign-Language-Recognition/
 │   ├── training.ipynb
 │   └── evaluation.ipynb
 │
-├── src/
-│   ├── train_model.py
-│   ├── inference.py
-│   └── sign_language_app.py
-│
-├── screenshots/
-│
+├── signdetection_overlaysentencevoice.ipynb
+├── signdetection_overlaysentencevoice.py
 ├── requirements.txt
-│
 └── README.md
-🧠 Model Information
-Model Architecture
-MobileNetV2 (Transfer Learning)
-Input Size
-224 × 224 × 3
-Preprocessing
-Image Cropping
-Resizing
-Normalization
-MobileNetV2 Preprocessing
-Prediction Enhancement
-Confidence Scoring
-Prediction Smoothing
-🚀 Installation
-1. Clone the Repository
+```
+
+## 🧠 Model Information
+
+### Model Architecture
+- **Model:** MobileNetV2 (Transfer Learning)
+- **Framework:** TensorFlow / Keras
+- **Task:** Real-Time Sign Language Alphabet Recognition
+
+### Input Specifications
+- **Input Size:** 224 × 224 × 3
+- **Image Preprocessing:** MobileNetV2 `preprocess_input()`
+- **Color Format:** RGB
+
+### Training Configuration
+- **Transfer Learning:** ImageNet Pretrained MobileNetV2
+- **Optimizer:** Adam
+- **Loss Function:** Categorical Crossentropy
+- **Evaluation Metric:** Accuracy
+
+### Data Augmentation
+- Rotation
+- Zoom
+- Width Shift
+- Height Shift
+
+### Prediction Pipeline
+1. Capture live video from the webcam.
+2. Detect the hand using CVZone.
+3. Extract the Region of Interest (ROI).
+4. Resize the image to **224 × 224**.
+5. Apply MobileNetV2 preprocessing.
+6. Predict the corresponding alphabet.
+7. Display the confidence score.
+8. Apply prediction smoothing.
+9. Convert the recognized text into speech.
+
+### Prediction Enhancement
+- ✅ Prediction smoothing for stable recognition
+- ✅ Real-time confidence scoring
+- ✅ Letter-by-letter speech feedback
+- ✅ Sentence formation
+- ✅ Complete sentence speech generation
+
+### Model Performance
+
+| Metric | Value |
+|---------|--------|
+| Validation Accuracy | **97.28%** |
+| Test Accuracy | **96.80%** |
+| Prediction Type | Real-Time |
+| Output | Alphabet → Text → Speech |
+
+## 🚀 Installation
+
+Follow the steps below to set up and run the project on your local machine.
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/rajicoding/AI_Based_SignLanguageRecognition_and_Speechgeneration.git
-2.Navigate to the project directory
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
 cd AI_Based_SignLanguageRecognition_and_Speechgeneration
-3. Create Virtual Environment
+```
+
+### 3. Create a Virtual Environment
+
+```bash
 python -m venv signlang
-4.Activate Environment
-Windows
+```
+
+### 4. Activate the Virtual Environment
+
+**Windows**
+
+```bash
 signlang\Scripts\activate
-Linux / Mac
+```
+
+**Linux / macOS**
+
+```bash
 source signlang/bin/activate
-5.Install Dependencies
+```
+
+### 5. Install the Required Dependencies
+
+```bash
 pip install -r requirements.txt
-▶️ Running the Application
-signdetection_overlaysentencevoice.ipynb
-or
-You can run it by storing it as a Python file 
+```
+
+### 6. Run the Application
+
+#### Option 1: Run the Jupyter Notebook
+
+```bash
+jupyter notebook signdetection_overlaysentencevoice.ipynb
+```
+
+#### Option 2: Run the Python Script
+
+```bash
 python signdetection_overlaysentencevoice.py
+```
 
-The webcam will open automatically and start detecting hand signs in real time.
+The webcam will open automatically and start recognizing hand signs in real time.
 
-🎮 Controls
-Key	Function
-Space	Add Space
-Backspace	Delete Last Letter
-C	Clear Sentence
-Enter	Speak Complete Sentence
-Q	Quit Application
 
-🎥 Demo
-The system is capable of:
-Detecting hand signs in real time
-Recognizing alphabets
-Forming meaningful sentences
-Providing letter-by-letter voice feedback
-Speaking complete sentences
+## 🎮 Controls
 
-📈 Future Enhancements
-Word-level sign recognition
-Continuous sign language translation
-Support for Indian Sign Language vocabulary
-Web application deployment
-Mobile application deployment
-Multilingual speech output
+| Key | Function |
+|------|----------|
+| **Space** | Add a space between words |
+| **Backspace** | Delete the last recognized letter |
+| **C** | Clear the entire sentence |
+| **Enter** | Convert the complete sentence into speech |
+| **Q** | Quit the application |
 
-💡 Key Learnings
-This project helped me gain hands-on experience in:
-Computer Vision
-Deep Learning
-Transfer Learning
-Real-Time Inference
-Human-Computer Interaction
-Speech Synthesis
-End-to-End AI Application Development
+## 🎥 Demo
 
-👩‍💻 Author : Raja Rajeswari
-   Passionate about Artificial Intelligence, Deep Learning, and Computer Vision.
+Watch the project in action and see how AI transforms sign language into text and speech in real time.
 
+**Demo Highlights**
+- 🤟 Live hand sign detection
+- 🔤 Real-time alphabet recognition
+- 📝 Sentence formation
+- 🔊 Letter-by-letter voice feedback
+- 🎙️ Complete sentence speech generation
+
+▶️ **Demo Video:** *(Add your YouTube or LinkedIn video link here)*
+
+## 🚀 Future Enhancements
+
+- 🌍 Extend the system to recognize complete words and sentences.
+- 🧤 Support dynamic gestures and continuous sign language translation.
+- 🎯 Improve recognition accuracy using larger and more diverse datasets.
+- 🌐 Deploy the application as a web-based platform for easy accessibility.
+- 📱 Develop a mobile application for real-time communication.
+- 🌎 Add support for multiple sign languages beyond the current dataset.
+
+## 💡 Key Learnings
+
+This project was more than building a sign language recognition system—it was an opportunity to understand how different AI technologies work together to solve a real-world problem.
+
+Through this project, I gained hands-on experience in:
+
+- 🤖 Developing an end-to-end AI application.
+- 🧠 Applying Transfer Learning with MobileNetV2.
+- 📷 Building a real-time Computer Vision pipeline.
+- 🖐️ Detecting and tracking hand gestures using CVZone and MediaPipe.
+- 🔤 Converting visual input into meaningful text.
+- 🔊 Integrating Text-to-Speech for real-time voice generation.
+- 🛠️ Debugging, optimizing, and improving model performance for real-time inference.
+- 🚀 Designing an AI solution with accessibility and inclusivity in mind.
+
+## 👩‍💻 About the Author
+
+Hi, I'm **Rajee**! 👋
+
+I'm an aspiring **AI & Data Science Engineer** with a passion for **Computer Vision, Deep Learning, and Machine Learning**. I enjoy building AI-powered applications that solve real-world problems while continuously learning and sharing my journey.
+
+### 📬 Connect with Me
+
+- 💼 **LinkedIn:** www.linkedin.com/in/rajarajeswari-ramanathan-8a267865
+- 💻 **GitHub:** https://github.com/rajicoding
+- 📧 **Email:** <raji5585@gmail.com>
+
+If you enjoyed this project, consider giving it a ⭐ and feel free to connect with me to discuss AI, Machine Learning, and Computer Vision!
 Connect with Me
-LinkedIn: [www.linkedin.com/in/rajarajeswari-ramanathan-8a267865]
+
