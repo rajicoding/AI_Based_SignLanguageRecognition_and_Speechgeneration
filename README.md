@@ -228,7 +228,7 @@ Watch the project in action and see how AI transforms sign language into text an
 - 🔊 Letter-by-letter voice feedback
 - 🎙️ Complete sentence speech generation
 
-▶️ **Demo Video:** *(Add your YouTube or LinkedIn video link here)*
+▶️ **Demo Video:** [*[LinkedIn video link here)](https://www.linkedin.com/posts/rajarajeswari-ramanathan-8a267865_artificialintelligence-computervision-deeplearning-ugcPost-7480141030093217792-iE_z/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA3NifoBwRlq2hvG6fVZvo3a3A42zqW3IA8)*]
 
 ## 🚀 Future Enhancements
 
