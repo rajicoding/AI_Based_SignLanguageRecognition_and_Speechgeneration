@@ -103,21 +103,20 @@ Prediction Enhancement
 Confidence Scoring
 Prediction Smoothing
 🚀 Installation
-Clone the Repository
-git clone https://github.com/your-username/sign-language-recognition.git
-
-cd sign-language-recognition
-Create Virtual Environment
-python -m venv venv
-Activate Environment
+1. Clone the Repository
+git clone https://github.com/rajicoding/AI_Based_SignLanguageRecognition_and_Speechgeneration.git
+2.Navigate to the project directory
+cd AI_Based_SignLanguageRecognition_and_Speechgeneration
+3. Create Virtual Environment
+python -m venv signlang
+4.Activate Environment
 Windows
-venv\Scripts\activate
+signlang\Scripts\activate
 Linux / Mac
-source venv/bin/activate
-Install Dependencies
+source signlang/bin/activate
+5.Install Dependencies
 pip install -r requirements.txt
 ▶️ Running the Application
-
 signdetection_overlaysentencevoice.ipynb
 or
 You can run it by storing it as a Python file 
@@ -140,6 +139,7 @@ Recognizing alphabets
 Forming meaningful sentences
 Providing letter-by-letter voice feedback
 Speaking complete sentences
+
 📈 Future Enhancements
 Word-level sign recognition
 Continuous sign language translation
@@ -147,10 +147,9 @@ Support for Indian Sign Language vocabulary
 Web application deployment
 Mobile application deployment
 Multilingual speech output
+
 💡 Key Learnings
-
 This project helped me gain hands-on experience in:
-
 Computer Vision
 Deep Learning
 Transfer Learning
